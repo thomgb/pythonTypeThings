@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="p.4" format="1">
+  <advance width="500"/>
+  <outline>
+    <contour>
+      <point x="82" y="0" type="line"/>
+      <point x="100" y="19" type="line"/>
+      <point x="70" y="50" type="line"/>
+      <point x="100" y="80" type="line"/>
+      <point x="82" y="100" type="line"/>
+      <point x="51" y="69" type="line"/>
+      <point x="20" y="100" type="line"/>
+      <point x="0" y="81" type="line"/>
+      <point x="32" y="50" type="line"/>
+      <point x="0" y="19" type="line"/>
+      <point x="20" y="0" type="line"/>
+      <point x="51" y="31" type="line"/>
+    </contour>
+  </outline>
+</glyph>

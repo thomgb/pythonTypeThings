@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ascender</key>
+	<integer>750</integer>
+	<key>capHeight</key>
+	<integer>750</integer>
+	<key>descender</key>
+	<integer>-250</integer>
+	<key>familyName</key>
+	<string>Pixels</string>
+	<key>note</key>
+	<string>f = CurrentFont()
+w = "pixel"
+newPage(2100,1000)
+translate(0,200)
+
+pixels = []
+for g in f:
+    if "p." in g.name:
+        pixels.append(g)
+
+for l in w:
+    for c in f[l].contours:
+        p = choice(pixels)
+        save()
+        translate(c.box[0],c.box[3])
+        b=choice(range(0,2,1))
+        fill(b,0,0)
+        drawGlyph(p)
+        restore()
+    #drawGlyph(f[l])
+    translate(f[l].width,0)</string>
+	<key>postscriptBlueValues</key>
+	<array>
+	</array>
+	<key>postscriptFamilyBlues</key>
+	<array>
+	</array>
+	<key>postscriptFamilyOtherBlues</key>
+	<array>
+	</array>
+	<key>postscriptOtherBlues</key>
+	<array>
+	</array>
+	<key>postscriptStemSnapH</key>
+	<array>
+	</array>
+	<key>postscriptStemSnapV</key>
+	<array>
+	</array>
+	<key>styleName</key>
+	<string>Smal</string>
+	<key>unitsPerEm</key>
+	<integer>1000</integer>
+	<key>versionMajor</key>
+	<integer>0</integer>
+	<key>versionMinor</key>
+	<integer>1</integer>
+	<key>xHeight</key>
+	<integer>500</integer>
+</dict>
+</plist>
