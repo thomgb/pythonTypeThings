@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ascender</key>
+	<integer>750</integer>
+	<key>capHeight</key>
+	<integer>750</integer>
+	<key>descender</key>
+	<integer>-250</integer>
+	<key>familyName</key>
+	<string>Mogee</string>
+	<key>note</key>
+	<string><![CDATA[f = CurrentFont()
+w = "pixel"
+newPage(2100,1000)
+translate(0,200)
+
+pixels = []
+for g in f:
+    if "p." in g.name:
+        pixels.append(g)
+
+for l in w:
+    for c in f[l].contours:
+        p = choice(pixels)
+        save()
+        translate(c.box[0],c.box[3])
+        b=choice(range(0,2,1))
+        fill(b,0,0)
+        drawGlyph(p)
+        restore()
+    #drawGlyph(f[l])
+    translate(f[l].width,0)]]></string>
+	<key>openTypeHeadCreated</key>
+	<string>2019/09/07 18:32:51</string>
+	<key>openTypeNamePreferredFamilyName</key>
+	<string>Mogee</string>
+	<key>openTypeNamePreferredSubfamilyName</key>
+	<string>Smal</string>
+	<key>openTypeOS2WeightClass</key>
+	<integer>400</integer>
+	<key>openTypeOS2WidthClass</key>
+	<integer>5</integer>
+	<key>postscriptBlueValues</key>
+	<array>
+	</array>
+	<key>postscriptFontName</key>
+	<string>Mogee-Smal</string>
+	<key>postscriptOtherBlues</key>
+	<array>
+	</array>
+	<key>styleMapFamilyName</key>
+	<string>Mogee Smal</string>
+	<key>styleMapStyleName</key>
+	<string>regular</string>
+	<key>styleName</key>
+	<string>Smal</string>
+	<key>unitsPerEm</key>
+	<integer>1000</integer>
+	<key>versionMajor</key>
+	<integer>0</integer>
+	<key>versionMinor</key>
+	<integer>1</integer>
+	<key>xHeight</key>
+	<integer>500</integer>
+</dict>
+</plist>
