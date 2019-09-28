@@ -3,13 +3,14 @@ example of drawing with a typeface
 
 """
 
+# parameters
+fontPath = "pixels-smal.ufo"
+word = "typeface"
+distortion = 20
 
 from fontParts.world import *
 
-fontPath = "pixels-smal.ufo"
-word = "typeface"
 # some functions
-
 def drawGlyph(glyph):
 	from fontTools.pens.cocoaPen import CocoaPen
 	pen = CocoaPen(glyph.getParent())
@@ -20,7 +21,7 @@ def drawGlyph(glyph):
 font = OpenFont(fontPath, showInterface=False)
 
 # calaculate the canvas
-width = 0
+width = 100
 height = font.info.unitsPerEm + 200
 for letter in word:
     glyph = font[letter]
@@ -32,8 +33,8 @@ for letter in word:
     glyph = font[letter]
     for contour in glyph.contours:
         for point in contour.points:
-            point.x += randint(-20,20)
-            point.y += randint(-20,20)
+            point.x += randint(-distortion, distortion)
+            point.y += randint(-distortion, distortion)
     drawGlyph(font[letter])
     translate(glyph.width)
 
